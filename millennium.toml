@@ -1,0 +1,21 @@
+# nopox-notify — уведомления Steam уходят в системные (notify-send → nopox-shell или любой другой демон),
+# свои тосты Steam не показывает.
+# Сборка и установка: bun install && bun run build (кладёт плагин в Millennium), затем включить
+# в Steam → Millennium → Plugins.
+
+[plugin]
+id = "nopox-notify"
+name = "nopox notify"
+version = "1.0.0"
+author = "nopox"
+description = "Steam notifications as desktop notifications (nopox-shell) instead of Steam toasts."
+
+[backend]
+entry = "backend/main.lua"
+sources = ["backend/**/*.lua"]
+
+[frontend]
+entry = "frontend/index.tsx"
+
+[compiler]
+output_path = "auto"
